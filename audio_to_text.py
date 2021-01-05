@@ -9,7 +9,7 @@ with sr.AudioFile('2p_convo_1.wav') as source:
 
         text = r.recognize_google(audio_text, language='ko-KR')
         print('Converting audio transcripts into text ...')
-        with open('transcript.txt', mode='w') as file_object:
+        with open('transcript.txt', mode='w', encoding='utf-8') as file_object:
             print(text, file=file_object)
     except:
         print('Sorry... run again...')
