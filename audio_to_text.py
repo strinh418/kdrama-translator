@@ -3,7 +3,7 @@ import speech_recognition as sr
 r = sr.Recognizer()
 
 with sr.AudioFile('2p_convo_1.wav') as source:
-    audio_text = r.listen(source)
+    audio_text = r.record(source)
 
     try:
 
