@@ -11,7 +11,7 @@ except:
 for f in samples:
     sample = path.join('audio_samples', f)
     with sr.AudioFile(sample) as source:
-        audio_text = r.listen(source)
+        audio_text = r.record(source)
         try:
             text = r.recognize_google(audio_text, language='ko-KR')
             with open('recognize_google.txt', mode='a', encoding='utf-8') as file_object:
