@@ -13,8 +13,9 @@ for f in samples:
             with open('recognize_google.txt', mode='a', encoding='utf-8') as file_object:
                 print(text, file=file_object)
                 print('', file=file_object)
-        except:
+        except Exception as e:
             print('There was a problem converting speech to text.')
+            print(e)
 
 """ Given a file name of the actual results and a file name for the expected results. Prints out the differences between the two."""
 def check_diff_file(actual, expected, log=None, detailed=False):
